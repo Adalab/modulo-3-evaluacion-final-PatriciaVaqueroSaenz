@@ -1,4 +1,4 @@
-# Ejercicio de Rick y Morty
+# Rick y Morty
 
 ## Enunciado
 

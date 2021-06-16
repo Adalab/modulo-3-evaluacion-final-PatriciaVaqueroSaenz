@@ -1,0 +1,15 @@
+.form{
+    height:150px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+.form__input-text{
+    height: 40px;
+    width: 300px;
+    background-color: black;
+    color:white;
+    border: 2px solid aqua;
+    padding:10px;
+}

@@ -7,11 +7,10 @@
 }
 .card-item{
     
-    border: 1px solid rgb(85, 254, 1);
+    border: 2px solid aqua;
     &:hover{
         box-shadow: 9px 9px 48px 7px rgba(111, 216, 19, 0.81);
     }
-        
     background-color: white;
     width:150px;
     height: 245px;

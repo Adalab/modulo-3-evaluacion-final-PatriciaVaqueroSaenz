@@ -16,6 +16,7 @@ const App = () => {
   const [characters, setCharacters] = useState(ls.get("users", []));
   console.log(characters);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
+  const [filterSpecie, setFilterSpecie] = useState(ls.get("filterSpecie", ""));
 
   // effects
   useEffect(() => {
@@ -34,29 +35,43 @@ const App = () => {
     ls.set("filterName", filterName);
   }, [filterName]);
 
+  useEffect(() => {
+    ls.set("filterSpecie", filterSpecie);
+  }, [filterSpecie]);
+
   // event handlers
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
+    } else if (data.key === "specie") {
+      setFilterSpecie(data.value);
     }
   };
 
   // render
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(filterName.toLowerCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      // if (filterSpecie === "") {
+      //   return true;
+      // } else {
+      //   return character.species === filterSpecie;
+      // }
+      return filterSpecie === '' ? true : character.species === filterSpecie
+    });
 
-  const renderCharacterDetail = props => {
-    
+  const renderCharacterDetail = (props) => {
     const routeCharId = parseInt(props.match.params.charId);
-    const foundCharacter = characters.find(character => {
+    const foundCharacter = characters.find((character) => {
       return character.id === routeCharId;
     });
 
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
     } else {
-      return <CharacterNotFound/>;
+      return <CharacterNotFound />;
     }
   };
 
@@ -66,13 +81,17 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <main>
-            <Filters filterName={filterName} handleFilter={handleFilter} />
+            <Filters
+              filterName={filterName}
+              filterSpecie={filterSpecie}
+              handleFilter={handleFilter}
+            />
             <CharacterList characters={filteredCharacters} />
           </main>
         </Route>
         <Route path="/character/:charId" render={renderCharacterDetail} />
         <Route>
-          <CharacterNotFound/>
+          <CharacterNotFound />
         </Route>
       </Switch>
       <Footer />

@@ -1,5 +1,6 @@
 import React from 'react';
 import FilterName from './FilterName';
+import FilterSpecie from './FilterSpecie';
 
 const Filters = (props) =>{
   const handleForm = (ev) => {
@@ -9,6 +10,7 @@ const Filters = (props) =>{
     <section>
         <form className="form" onSubmit={handleForm}>
             <FilterName filterName={props.filterName} handleFilter={props.handleFilter}/>
+            <FilterSpecie filterSpecie={props.filterSpecie}handleFilter={props.handleFilter} />
         </form>
     </section>
   )

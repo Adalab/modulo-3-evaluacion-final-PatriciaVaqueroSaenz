@@ -14,7 +14,8 @@ const getApiData = () => {
               name: character.name,
               species: character.species,
               origin: character.origin.name,
-              status: character.status
+              status: character.status,
+              episode: character.episode
             };
             
           });

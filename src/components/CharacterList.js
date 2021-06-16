@@ -3,7 +3,7 @@ import Character from './Character';
 import CharacterNotFound from './CharacterNotFound';
 
 const CharacterList = props => {
-  //si buscamos un personaje que no existe
+  //si buscamos un personaje que no existe (el array de personajes filtrados que nos llega por props desde App está vacío)
   if (props.characters.length === 0) {
     return (
       <CharacterNotFound/>

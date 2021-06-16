@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Character = props => {
 
   return (
+    <Link className='link' to={`/character/${props.character.id}`}>
       <article className="card">
         <img
           className="card__img"
@@ -15,6 +17,7 @@ const Character = props => {
           {props.character.species}
         </p>
       </article>
+      </Link>
   );
 };
 

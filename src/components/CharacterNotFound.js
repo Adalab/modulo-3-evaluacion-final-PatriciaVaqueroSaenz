@@ -1,5 +1,6 @@
 import React from 'react';
-import photo from '../images/notFound.png'
+import photo from '../images/notFound.png';
+import { Link } from "react-router-dom";
 
 const CharacterNotFound = () => {
 
@@ -9,7 +10,6 @@ const CharacterNotFound = () => {
     <img className='container-notFound__img' src={photo} alt='character not found' />
     <div className='container-notFound__text'>
       <p>This character doesn't exist.</p>
-      <p>Try again with other name.</p>
     </div>
   </div>
   );

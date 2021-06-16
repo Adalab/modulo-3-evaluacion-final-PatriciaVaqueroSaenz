@@ -11,18 +11,22 @@
 }
 .card__img{
     width:140px;
-    margin-top: 5px;
+    margin-top: 15px;
     border-radius: 15px;
 }
 .card__title{
     margin-top:10px;
     text-align: center;
+    color: white;
 }
 .card__description{
     width:auto;
     margin-top: 20px;
     font-size:14px;
-    background-color:aqua;
+    
     padding:4px;
     border-radius: 10px;
+}
+.card-detail__specie{
+    width:35px;
 }

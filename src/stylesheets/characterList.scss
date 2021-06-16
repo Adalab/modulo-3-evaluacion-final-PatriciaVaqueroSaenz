@@ -1,17 +1,16 @@
 .card-list {
   margin: 0 50px 70px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 40px;
 }
 .card-item {
-  border: 2px solid aqua;
   &:hover {
     box-shadow: 9px 9px 48px 7px rgba(111, 216, 19, 0.81);
   }
-  background-color: white;
-  width: 150px;
-  height: 245px;
+  background-color: #ffffff4D;
+  width: 200px;
+  height: 280px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;

@@ -4,12 +4,16 @@ import CharacterList from './CharacterList';
 import logo from '../images/logo.png';
 // services
 import getApiData from '../services/api';
+import ls from '../services/localStorage';
+
+
 
 const App = () => {
   
   // state
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState(ls.get('users', []));
   console.log(characters);
+  const [filterName, setFilterName] = useState(ls.get('filterName', ''));
   
   // effects
     useEffect(() => {
@@ -19,6 +23,10 @@ const App = () => {
         });
       }
     }, []);
+
+    useEffect(() => {
+      ls.set('characters', characters);
+    }, [characters]);
 
   // event handlers
 

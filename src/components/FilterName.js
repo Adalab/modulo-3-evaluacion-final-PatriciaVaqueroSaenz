@@ -15,7 +15,7 @@ const FilterName = (props) =>{
       </label>
       <input
         className="form__input-text"
-        placeholder='Busca a tu personaje:'
+        placeholder='Search your character:'
         type="text"
         name="name"
         id="name"

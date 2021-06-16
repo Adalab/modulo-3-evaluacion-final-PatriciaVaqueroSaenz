@@ -1,14 +1,22 @@
+.card-detail__main{
+  height:100vh;
+}
 .card-detail {
-  margin: 0 auto;
-  width: 60%;
-  min-width: 400px;
-  height: 400px;
+  margin: 70px auto;
+  width: 320px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #00ffff80;
   border-radius: 30px;
-  margin-bottom: 70px;
+  @media all and (min-width: 768px){
+    height: 400px;
+    width: 500px;
+  }
+  @media all and (min-width: 1024px){
+    width: 600px;
+  }
 }
 .linkGoBack {
   text-decoration: none;
@@ -32,8 +40,11 @@
   
 }
 .card-detail__img {
-  width: 200px;
+  width: 150px;
   border-radius: 30px;
+  @media all and (min-width: 768px){
+    width: 200px;
+}
 }
 .card-detail__info {
     color: white;

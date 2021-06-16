@@ -28,6 +28,7 @@ const CharacterDetail = (props) => {
     }
   };
   return (
+    <main className='card-detail__main'>
     <div className="card-detail">
       <Link className="linkGoBack" to="/">
         <img className="exitIcon" src={exit} alt="exit" />
@@ -69,6 +70,7 @@ const CharacterDetail = (props) => {
         </ul>
       </section>
     </div>
+    </main>
   );
 };
 

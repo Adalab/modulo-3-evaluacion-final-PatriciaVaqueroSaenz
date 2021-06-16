@@ -1,6 +1,5 @@
 import React from 'react';
 import photo from '../images/notFound.png';
-import { Link } from "react-router-dom";
 
 const CharacterNotFound = () => {
 

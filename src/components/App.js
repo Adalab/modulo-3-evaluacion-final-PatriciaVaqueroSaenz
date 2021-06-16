@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 // components
+import Header from './Header'
 import CharacterList from './CharacterList';
-import logo from '../images/logo.png';
+import Footer from './Footer';
+
 // services
 import getApiData from '../services/api';
 import ls from '../services/localStorage';
@@ -34,16 +36,11 @@ const App = () => {
 
   return (
     <>
-    <header className="header">
-      <h1 className="title">Rick y Morty</h1>
-      <img src={logo} alt="Rick y Morty logo" className="logo"/>
-    </header>
+    <Header/>
     <main>
       <CharacterList characters={characters} />
     </main>
-    <footer className="footer">
-      Developed by Patricia Vaquero
-    </footer>
+    <Footer/>
     </>
   );
 };

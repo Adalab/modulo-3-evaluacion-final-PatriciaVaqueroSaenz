@@ -1,11 +1,11 @@
 import React from 'react';
 
-const FilterSpecie = (props) =>{
+const FilterStatus = (props) =>{
 
     const handleChange = ev => {
         props.handleFilter({
           value: ev.target.value,
-          key: 'specie'
+          key: 'status'
         });
       };
 
@@ -16,17 +16,18 @@ const FilterSpecie = (props) =>{
 
       <select
         className="form__input-text"
-        name="specie"
-        id="specie"
-        value={props.filterSpecie}
+        name="status"
+        id="status"
+        value={props.filterStatus}
         onChange={handleChange}
       >
-        <option value="">Species</option>
-        <option value="Alien">Alien</option>
-        <option value="Human">Human</option>
+        <option value="">Status</option>
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="unknown">Unknown</option>
       </select>
     </>
   );
 };
 
-export default FilterSpecie;
+export default FilterStatus;

@@ -16,7 +16,8 @@ const App = () => {
   const [characters, setCharacters] = useState(ls.get("users", []));
   console.log(characters);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-  const [filterSpecie, setFilterSpecie] = useState(ls.get("filterSpecie", ""));
+  const [filterSpecie, setFilterSpecie] = useState(ls.get("filterSpecie", "")); 
+  const [filterStatus, setFilterStatus] = useState(ls.get("filterStatus", ""))
 
   // effects
   useEffect(() => {
@@ -39,12 +40,18 @@ const App = () => {
     ls.set("filterSpecie", filterSpecie);
   }, [filterSpecie]);
 
+  useEffect(() => {
+    ls.set("filterStatus", filterStatus);
+  }, [filterStatus]);
+
   // event handlers
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
     } else if (data.key === "specie") {
       setFilterSpecie(data.value);
+    } else if (data.key === "status") {
+      setFilterStatus(data.value);
     }
   };
 
@@ -54,12 +61,10 @@ const App = () => {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
     })
     .filter((character) => {
-      // if (filterSpecie === "") {
-      //   return true;
-      // } else {
-      //   return character.species === filterSpecie;
-      // }
       return filterSpecie === '' ? true : character.species === filterSpecie
+    })
+    .filter((character) => {
+      return filterStatus === '' ? true : character.status === filterStatus
     });
 
   const renderCharacterDetail = (props) => {
@@ -84,6 +89,7 @@ const App = () => {
             <Filters
               filterName={filterName}
               filterSpecie={filterSpecie}
+              filterStatus={filterStatus}
               handleFilter={handleFilter}
             />
             <CharacterList characters={filteredCharacters} />

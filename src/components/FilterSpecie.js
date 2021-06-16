@@ -12,7 +12,6 @@ const FilterSpecie = (props) =>{
   return (
     <>
       <label className="form__label" htmlFor="specie">
-        Género:
       </label>
 
       <select

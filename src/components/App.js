@@ -71,6 +71,9 @@ const App = () => {
           </main>
         </Route>
         <Route path="/character/:charId" render={renderCharacterDetail} />
+        <Route>
+          <CharacterNotFound/>
+        </Route>
       </Switch>
       <Footer />
     </>

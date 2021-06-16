@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import exit from "../images/exit.png";
+import human from "../images/human.png";
+import alien from "../images/alien.png";
 import alive from "../images/alive.png";
 import dead from "../images/dead.png";
 import unknown from "../images/unknown.png";
@@ -16,6 +18,15 @@ const CharacterDetail = (props) => {
     }
   };
 
+  const getSpecie = () => {
+    if (props.character.species === "Human") {
+      return human;
+    } else if (props.character.species === "Alien") {
+      return alien;
+    } else {
+      return unknown;
+    }
+  };
   return (
     <div className="card-detail">
       <Link className="linkGoBack" to="/">
@@ -31,7 +42,7 @@ const CharacterDetail = (props) => {
           alt={props.character.name}
         />
         <ul className="card-detail__info">
-          <li>
+          <li className="card-detail__item">
             Status:
             <img
               className="card-detail__status"
@@ -40,9 +51,21 @@ const CharacterDetail = (props) => {
               title={props.character.status}
             />
           </li>
-          <li>Specie: {props.character.species}</li>
-          <li>Origin: {props.character.origin}</li>
-          <li>Episodes: {props.character.episode.length}</li>
+          <li className="card-detail__item">
+            Specie:
+            <img
+              className="card-detail__status"
+              src={getSpecie()}
+              alt={props.character.species}
+              title={props.character.species}
+            />
+          </li>
+          <li className="card-detail__item">
+            Origin: {props.character.origin}
+          </li>
+          <li className="card-detail__item">
+            Episodes: {props.character.episode.length}
+          </li>
         </ul>
       </section>
     </div>

@@ -1,5 +1,5 @@
-.card-detail__main{
-  height:100vh;
+.card-detail__main {
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -12,11 +12,11 @@
   align-items: center;
   background-color: #00ffff80;
   border-radius: 30px;
-  @media all and (min-width: 768px){
+  @media all and (min-width: 768px) {
     height: 400px;
     width: 500px;
   }
-  @media all and (min-width: 1024px){
+  @media all and (min-width: 1024px) {
     width: 600px;
   }
 }
@@ -25,47 +25,45 @@
   text-decoration: none;
   color: white;
   display: flex;
-  flex-direction:row;
-  justify-content:flex-end;
-  width:100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
 }
 //para notfound
-.linkBack{
+.linkBack {
   display: flex;
-  flex-direction:row;
-  justify-content:center;
+  flex-direction: row;
+  justify-content: center;
 }
-.exitIcon{
-    width:60px;
+.exitIcon {
+  width: 60px;
 }
 .card-detail__title {
-  
   color: white;
 }
 .card-detail__content {
   margin: 30px 20px 0;
   display: flex;
   flex-direction: row;
-  
 }
 .card-detail__img {
   width: 150px;
   border-radius: 30px;
-  @media all and (min-width: 768px){
+  @media all and (min-width: 768px) {
     width: 200px;
-}
+  }
 }
 .card-detail__info {
-    color: white;
+  color: white;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 30px;
 }
-.card-detail__status{
-  width:40px;
+.card-detail__status {
+  width: 40px;
 }
-.card-detail__item{
+.card-detail__item {
   padding-bottom: 10px;
 }

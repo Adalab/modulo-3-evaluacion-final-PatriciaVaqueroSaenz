@@ -2,24 +2,24 @@
   min-height: 100vh;
   min-width: 360px;
   width: 100%;
-  background-image: url("../images/bg-rm.png");
+  background-image: url("../../images/bg-rm.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.main{
+.main {
   margin: 0 30px;
-  @media all and (min-width: 768px){
+  @media all and (min-width: 768px) {
     margin: 0 50px;
   }
-  @media all and (min-width: 1024px){
+  @media all and (min-width: 1024px) {
     margin: 0 100px;
   }
-  @media all and (min-width: 1440px){
+  @media all and (min-width: 1440px) {
     margin: 0 150px;
   }
-  @media all and (min-width: 2000px){
+  @media all and (min-width: 2000px) {
     margin: 0 500px;
   }
 }

@@ -1,0 +1,33 @@
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card__img {
+  width: 140px;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+.card__title {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+.card__description {
+  width: 100%;
+  margin-top: 20px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-detail__icon {
+  width: 40px;
+}

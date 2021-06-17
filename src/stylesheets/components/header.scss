@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  min-width: 360px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  @media all and (min-width: 768px) {
+    height: 250px;
+  }
+}
+.logo {
+  width: 330px;
+  @media all and (min-width: 600px) {
+    width: 500px;
+  }
+  @media all and (min-width: 768px) {
+    width: 600px;
+  }
+  @media all and (min-width: 1024px) {
+    width: 700px;
+  }
+}
+.title {
+  display: none;
+}

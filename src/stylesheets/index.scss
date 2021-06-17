@@ -1,13 +1,13 @@
 // core
 
-@import './core.scss';
-@import './main.scss';
-@import './header.scss';
-@import './form.scss';
-@import './characterList.scss';
-@import './character.scss';
-@import './footer.scss';
-@import './characterDetail.scss';
+@import "./components/core.scss";
+@import "./components/main.scss";
+@import "./components/header.scss";
+@import "./components/form.scss";
+@import "./components/characterList.scss";
+@import "./components/character.scss";
+@import "./components/footer.scss";
+@import "./components/characterDetail.scss";
 
 // reset
 
@@ -15,5 +15,5 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }

@@ -1,0 +1,45 @@
+.form {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media all and (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+}
+.sort__label {
+  color: white;
+  margin-right: 5px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.form__input-text {
+  height: 40px;
+  width: auto;
+  background-color: black;
+  color: white;
+  border: 2px solid aqua;
+  padding: 10px;
+  margin-left: 20px;
+}
+.inputSort {
+  margin-right: 20px;
+}
+.container__resetButton {
+  text-align: center;
+}
+.resetButton {
+  margin-top: 10px;
+  background-color: aqua;
+  border: none;
+  padding: 5px 15px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 255, 255, 0.692);
+  }
+}

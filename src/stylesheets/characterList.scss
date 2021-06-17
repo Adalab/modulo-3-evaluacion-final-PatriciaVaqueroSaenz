@@ -6,9 +6,6 @@
 }
 .card-item {
   margin: 0 auto;
-  &:hover {
-    box-shadow: 9px 9px 48px 7px rgba(111, 216, 19, 0.81);
-  }
   background-color: #ffffff4D;
   width: 200px;
   height: 280px;
@@ -17,6 +14,9 @@
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
+  &:hover {
+    box-shadow: 9px 9px 48px 7px rgba(111, 216, 19, 0.81);
+  }
 }
 
 .container-notFound {

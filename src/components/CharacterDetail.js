@@ -28,48 +28,48 @@ const CharacterDetail = (props) => {
     }
   };
   return (
-    <main className='card-detail__main'>
-    <div className="card-detail">
-      <Link className="linkGoBack" to="/">
-        <img className="exitIcon" src={exit} alt="exit" />
-      </Link>
-      <header>
-        <h2 className="card-detail__title">{props.character.name}</h2>
-      </header>
-      <section className="card-detail__content">
-        <img
-          className="card-detail__img"
-          src={props.character.image}
-          alt={props.character.name}
-        />
-        <ul className="card-detail__info">
-          <li className="card-detail__item">
-            Status:
-            <img
-              className="card-detail__status"
-              src={getStatus()}
-              alt={props.character.status}
-              title={props.character.status}
-            />
-          </li>
-          <li className="card-detail__item">
-            Specie:
-            <img
-              className="card-detail__status"
-              src={getSpecie()}
-              alt={props.character.species}
-              title={props.character.species}
-            />
-          </li>
-          <li className="card-detail__item">
-            Origin: {props.character.origin}
-          </li>
-          <li className="card-detail__item">
-            Episodes: {props.character.episode.length}
-          </li>
-        </ul>
-      </section>
-    </div>
+    <main className="card-detail__main">
+      <div className="card-detail">
+        <Link className="linkGoBack" to="/">
+          <img className="exitIcon" src={exit} alt="exit" />
+        </Link>
+        <header>
+          <h2 className="card-detail__title">{props.character.name}</h2>
+        </header>
+        <section className="card-detail__content">
+          <img
+            className="card-detail__img"
+            src={props.character.image}
+            alt={props.character.name}
+          />
+          <ul className="card-detail__info">
+            <li className="card-detail__item">
+              Status:
+              <img
+                className="card-detail__status"
+                src={getStatus()}
+                alt={props.character.status}
+                title={props.character.status}
+              />
+            </li>
+            <li className="card-detail__item">
+              Specie:
+              <img
+                className="card-detail__status"
+                src={getSpecie()}
+                alt={props.character.species}
+                title={props.character.species}
+              />
+            </li>
+            <li className="card-detail__item">
+              Origin: {props.character.origin}
+            </li>
+            <li className="card-detail__item">
+              Episodes: {props.character.episode.length}
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
   );
 };

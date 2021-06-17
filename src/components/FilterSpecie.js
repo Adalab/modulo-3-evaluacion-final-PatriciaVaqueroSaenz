@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const FilterSpecie = (props) =>{
-
-    const handleChange = ev => {
-        props.handleFilter({
-          value: ev.target.value,
-          key: 'specie'
-        });
-      };
+const FilterSpecie = (props) => {
+  const handleChange = (ev) => {
+    props.handleFilter({
+      value: ev.target.value,
+      key: "specie",
+    });
+  };
 
   return (
     <>
-      <label className="form__label" htmlFor="specie">
-      </label>
+      <label className="form__label" htmlFor="specie"></label>
 
       <select
         className="form__input-text"

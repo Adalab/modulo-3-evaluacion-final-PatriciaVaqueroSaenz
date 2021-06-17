@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const FilterStatus = (props) =>{
-
-    const handleChange = ev => {
-        props.handleFilter({
-          value: ev.target.value,
-          key: 'status'
-        });
-      };
+const FilterStatus = (props) => {
+  const handleChange = (ev) => {
+    props.handleFilter({
+      value: ev.target.value,
+      key: "status",
+    });
+  };
 
   return (
     <>
-      <label className="form__label" htmlFor="specie">
-      </label>
+      <label className="form__label" htmlFor="specie"></label>
 
       <select
         className="form__input-text"
